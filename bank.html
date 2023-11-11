@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- main Div -->
+<div class="container flex gap-[20px]">
+    <!-- create account -->
+    <div class="createDiv border border shadow-md p-[1.5%] h-[200px] w-[30%] mt-[20px]">
+        <form id="createAccountForm">
+            <div class="labelDiv text-xl">
+                <label for="name">Name</label>
+            </div>
+             <div class="inputDiv text-xl border border-2">
+                <input type="text" id="name" placeholder="Enter your name"/>
+            </div>
+             <div class="labelDiv text-xl">
+                <label for="amount">Amount</label>
+            </div>
+             <div class="inputDiv text-xl border border-2">
+                <input type="number" id="amount" placeholder="Enter your amount"/>
+            </div>
+            <div class="createAccountDiv border mt-[20px] w-[42%] bg-green-500 text-white">
+                <input class="cursor-pointer" type="submit" value="Create Account">
+            </div>
+        </form>
+    </div>
+      <!-- deposit amount -->
+    <div class="createDiv border border shadow-md p-[1.5%] h-[200px] w-[30%] mt-[20px]">
+        <form id="depositAmountForm">
+            <div class="labelDiv text-xl">
+                <label for="accountNumber">Account Number</label>
+            </div>
+             <div class="inputDiv text-xl border border-2">
+                <input type="number" id="accountNumber" placeholder="Enter your account number"/>
+            </div>
+             <div class="labelDiv text-xl">
+                <label for="amountToDeposit">Deposit Amount</label>
+            </div>
+             <div class="inputDiv text-xl border border-2">
+                <input type="number" id="amountToDeposit" placeholder="Enter your amount"/>
+            </div>
+            <div class="depositAmountDiv border mt-[20px] w-[44%] bg-green-500 text-white">
+                <input class="cursor-pointer" type="submit" value="Deposit Amount">
+            </div>
+        </form>
+    </div>
+    <!-- withdraw amount -->
+        <div class="createDiv border border shadow-md p-[1.5%] h-[200px] w-[30%] mt-[20px]">
+        <form id="withdrawAmountForm">
+            <div class="labelDiv text-xl">
+                <label for="accountNumber">Account Number</label>
+            </div>
+             <div class="inputDiv text-xl border border-2">
+                <input type="number" id="accountNumberWithdraw" placeholder="Enter your account number"/>
+            </div>
+             <div class="labelDiv text-xl">
+                <label for="amountToWithdraw">Withdraw Amount</label>
+            </div>
+             <div class="inputDiv text-xl border border-2">
+                <input type="number" id="amountToWithdraw" placeholder="Enter your amount"/>
+            </div>
+            <div class="depositAmountDiv border mt-[20px] w-[49%] bg-green-500 text-white">
+                <input class="cursor-pointer" type="submit" value="Withdraw Amount">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script src="./bank.js"></script>
