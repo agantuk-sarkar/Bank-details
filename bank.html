@@ -6,6 +6,15 @@
     <title>Bank Account</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+      }
+      th {
+        background-color: #04AA6D;
+        color: white;
+      }​
+</style>
 <body>
     <!-- main Div -->
 <div class="container flex gap-[20px]">
@@ -69,6 +78,20 @@
             </div>
         </form>
     </div>
+</div>
+<!-- Table of contents -->
+<div class="border border-red-500 mt-[30px] min-h-[20vh] w-[30%] m-auto">
+    <table class="mt-[20px] m-[auto]">
+        <thead>
+            <tr>
+                <th>Sl.No</th>
+                <th>Name</th>
+                <th>Acc No</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 </div>
 </body>
 </html>
