@@ -17,7 +17,8 @@
 </style>
 <body>
     <!-- main Div -->
-<div class="container flex gap-[20px]">
+<h2 class="text-4xl mt-[20px] text-center">Bank Details</h2>    
+<div class="border-transparent container flex gap-[20px] mt-[40px] m-auto">
     <!-- create account -->
     <div class="createDiv border border shadow-md p-[1.5%] h-[200px] w-[30%] mt-[20px]">
         <form id="createAccountForm">
@@ -51,7 +52,7 @@
                 <label for="amountToDeposit">Deposit Amount</label>
             </div>
              <div class="inputDiv text-xl border border-2">
-                <input type="number" id="amountToDeposit" placeholder="Enter your amount"/>
+                <input type="number" id="amountToDeposit" placeholder="Enter your amount" required/>
             </div>
             <div class="depositAmountDiv border mt-[20px] w-[44%] bg-green-500 text-white">
                 <input class="cursor-pointer" type="submit" value="Deposit Amount">
@@ -65,13 +66,13 @@
                 <label for="accountNumber">Account Number</label>
             </div>
              <div class="inputDiv text-xl border border-2">
-                <input type="number" id="accountNumberWithdraw" placeholder="Enter your account number"/>
+                <input type="number" id="accountNumberWithdraw" placeholder="Enter your account number" required/>
             </div>
              <div class="labelDiv text-xl">
                 <label for="amountToWithdraw">Withdraw Amount</label>
             </div>
              <div class="inputDiv text-xl border border-2">
-                <input type="number" id="amountToWithdraw" placeholder="Enter your amount"/>
+                <input type="number" id="amountToWithdraw" placeholder="Enter your amount" required/>
             </div>
             <div class="depositAmountDiv border mt-[20px] w-[49%] bg-green-500 text-white">
                 <input class="cursor-pointer" type="submit" value="Withdraw Amount">
@@ -80,14 +81,16 @@
     </div>
 </div>
 <!-- Table of contents -->
-<div class="border border-red-500 mt-[30px] min-h-[20vh] w-[30%] m-auto">
+<div class="border-transparent mt-[40px] min-h-[20vh] w-[40%] m-auto shadow-md">
     <table class="mt-[20px] m-[auto]">
         <thead>
             <tr>
                 <th>Sl.No</th>
                 <th>Name</th>
+                <th>Date</th>
                 <th>Acc No</th>
                 <th>Balance</th>
+                <th>Remove</th>
             </tr>
         </thead>
         <tbody></tbody>
