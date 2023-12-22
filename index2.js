@@ -37,6 +37,9 @@ userForm.addEventListener("submit", function(event){
 
   let customerName = document.querySelector("#name").value;
   let customerAmount = document.querySelector("#amount").value;
+  let tableTag = document.querySelector(".tableTag");
+  let tableDiv = document.querySelector(".tableDiv");
+
   let userObj = new Bank(customerName, +customerAmount);
 
   // calling the dateFormat function by call() method
@@ -44,6 +47,10 @@ userForm.addEventListener("submit", function(event){
 
   arr.push(userObj);
   localStorage.setItem("myBank", JSON.stringify(arr));
+
+  tableDiv.style.display = "block";
+  tableTag.style.display = "block";
+
 
   // display/calling the function
   display(arr);
@@ -59,6 +66,8 @@ depositForm.addEventListener("submit",function(event){
 
     let depositAccountNumber = document.querySelector("#accountNumber").value;
     let amountToDeposit = document.querySelector("#amountToDeposit").value;
+    let tableTag = document.querySelector(".tableTag");
+    let tableDiv = document.querySelector(".tableDiv");
     let depositUserElement = arr.find(function(ele){
         if(ele.accountNumber === +depositAccountNumber){
             return ele;
@@ -73,6 +82,8 @@ depositForm.addEventListener("submit",function(event){
       // console.log(depositUserElement);
       // console.log(arr);
       localStorage.setItem("myBank",JSON.stringify(arr));
+      tableDiv.style.display = "block";
+      tableTag.style.display = "block";
       display(arr);
     } else{
       alert("Enter valid Account Number");
@@ -86,6 +97,8 @@ withdrawForm.addEventListener("submit",function(event){
 
   let accountNumberWithdraw = document.getElementById("accountNumberWithdraw").value;
   let amountToWithdraw = document.getElementById("amountToWithdraw").value;
+  let tableTag = document.querySelector(".tableTag");
+  let tableDiv = document.querySelector(".tableDiv");
 
   let withdrawUserElement = arr.find(function(ele){
     if(ele.accountNumber === +accountNumberWithdraw){
@@ -100,6 +113,8 @@ withdrawForm.addEventListener("submit",function(event){
     withdrawUserElement.withdraw(+amountToWithdraw);
     // console.log(arr);
     localStorage.setItem("myBank",JSON.stringify(arr));
+    tableDiv.style.display = "block";
+    tableTag.style.display = "block";
     display(arr);
   } else{
     alert("Enter valid Account Number");
