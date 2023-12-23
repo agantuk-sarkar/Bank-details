@@ -55,8 +55,8 @@ userForm.addEventListener("submit", function(event){
   // display/calling the function
   display(arr);
 
-  // console.log(userObj);
-  // console.log(arr);
+  console.log(userObj);
+  console.log(arr);
 })
 
 // For depositing amount
@@ -79,8 +79,8 @@ depositForm.addEventListener("submit",function(event){
     
     if(depositUserElement !== undefined){
       depositUserElement.deposit(+amountToDeposit);
-      // console.log(depositUserElement);
-      // console.log(arr);
+      console.log(depositUserElement);
+      console.log(arr);
       localStorage.setItem("myBank",JSON.stringify(arr));
       tableDiv.style.display = "block";
       tableTag.style.display = "block";
@@ -122,7 +122,6 @@ withdrawForm.addEventListener("submit",function(event){
 })
 
 // Creating contents for table
-
 function display(array){
   let tbody = document.querySelector("tbody");
   tbody.textContent = "";
